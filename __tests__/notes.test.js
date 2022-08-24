@@ -14,5 +14,5 @@ test('creates a new note', () => {
 
     expect(note.title).toBe('foo');
     expect(note.text).toBe('bar');
-    expect(note.id).toBeTruthy();
+    expect(note.id.length).toBe(12);
 });
