@@ -91,6 +91,7 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
+    console.log('out of the callback');
     getAndRenderNotes();
     renderActiveNote();
   });
