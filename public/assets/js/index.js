@@ -71,7 +71,6 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  console.log(newNote);
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -91,7 +90,6 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
-    console.log('out of the callback');
     getAndRenderNotes();
     renderActiveNote();
   });
